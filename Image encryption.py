@@ -39,7 +39,7 @@ print(imarray)
 im = Image.fromarray(imarray.astype('uint8'))
 
 
-# im.show()
+im.show()
 
 
 # merging the 2 image arrays
