@@ -16,7 +16,7 @@ def fetch_mail(u, p):
 
     messages = messages[0].split()
 
-    # print(messages)
+    print(messages)
 
     latest = int(messages[-1])
 
@@ -32,16 +32,16 @@ def fetch_mail(u, p):
 
         if isinstance(mail, tuple):
             msg = email.message_from_bytes(mail[1])
-            print(msg)
+            # print(msg)
 
     for part in msg.walk():
-        b = part.get_payload()
+        b = str(part.get_payload())
 
-    body = b.split(",")
+        body = b.split(",")
 
-    print(body)
+        print(body)
 
-    print(body[0])
+        print(str(body[1]))
 
 
 cred = pd.read_csv("credentials.txt")
